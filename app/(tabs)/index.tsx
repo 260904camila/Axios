@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect} from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Button } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 export default function HomeScreen() {
@@ -13,8 +14,19 @@ export default function HomeScreen() {
     const response = await axios.get('https://jsonplaceholder.typicode.com/posts')
     console.log(response)
   }
+
+  async function sendPost() {
+    const response = await axios.post('https://jsonplaceholder.typicode.com/posts', {
+      title: 'foo',
+      body: 'bar',
+      userId: 1,
+    })
+    console.log(response)
+  }
   return (
-   <></>
+   <SafeAreaView>
+   <Button title='Enviar Post'  onPress={() => sendPost}/>
+   </SafeAreaView>
   );
 }
 
