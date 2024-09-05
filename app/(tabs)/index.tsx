@@ -1,8 +1,13 @@
-import { Image, StyleSheet, Platform } from 'react-native';
 import axios from 'axios';
+import React, { useEffect} from 'react';
+import { StyleSheet } from 'react-native';
 
 
 export default function HomeScreen() {
+
+  useEffect(() => {
+    fetchPosts()
+  })
 
   async function fetchPosts() {
     const response = await axios.get('https://jsonplaceholder.typicode.com/posts')
