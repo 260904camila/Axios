@@ -3,6 +3,11 @@ import axios from 'axios';
 
 
 export default function HomeScreen() {
+
+  async function fetchPosts() {
+    const response = await axios.get('https://jsonplaceholder.typicode.com/posts')
+    console.log(response)
+  }
   return (
    <></>
   );
