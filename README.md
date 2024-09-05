@@ -26,5 +26,5 @@ Siga estas etapas para configurar e executar o projeto localmente:
 1. **Clone o Repositório**
 
    ```bash
-   git clone https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git
+   git clone https://github.com/260904camila/Axios.git
 
